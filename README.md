@@ -21,16 +21,16 @@ PromiseLoad('your_script.js');
 
 As any JS project, this one also brings some flexibility in its use.
 
-### **Src** *String*
+### **Src** &nbsp;*`String`*
 The url of the script to be loaded.
 
-### **Head** *Boolean*
+### **Head** &nbsp;*`Boolean`*
 If the script tag will be added to the document head element.  
 Defaults to true.
 
-### **Atrtibutes** *Object&lt;String, String&gt;*
+### **Atrtibutes** &nbsp;*`Object<String, String>`*
 Plain object containing additional attributes for the script tag.
 
-## **Returns** *Promise&lt;Event&gt;*
+## **Returns** &nbsp;*`Promise<Event>`*
 
 A Promise instance that resolves to the script's onLoad event. In case of error the promise will be rejected.
