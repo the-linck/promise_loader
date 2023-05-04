@@ -1,4 +1,4 @@
-# promise_loader
+# Promise Loader
 
 A small and simple to use function, that allos loading scripts atop of promises.
 The main point of using it is to reduce code repetition and also promise operations (chaining, joining, racing, etc) over script loading.
@@ -28,7 +28,7 @@ The url of the script to be loaded.
 If the script tag will be added to the document head element.  
 Defaults to true.
 
-### **Atrtibutes** &nbsp;*`Object<String, String>`*
+### **Attributes** &nbsp;*`Object<String, String>`*
 Plain object containing additional attributes for the script tag.
 
 ## **Returns** &nbsp;*`Promise<Event>`*
