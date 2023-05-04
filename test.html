@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Loader tests</title>
+    <script src="./PromiseLoader.js"></script>
+</head>
+<body>
+    <p id="test">
+        Content that will go away when the script is loaded.
+    </p>
+
+    <script>
+        PromiseLoad(
+            'https://code.jquery.com/jquery-3.6.4.slim.min.js',
+            true,
+            {
+                crossorigin: 'anonymous',
+                integrity: 'sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw='
+            }
+        ).then((Event) => {
+            console.log(Event);
+            $("#test").text('Content set after the script was loaded.');
+        });
+    </script>
+</body>
+</html>
