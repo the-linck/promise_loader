@@ -7,15 +7,23 @@
  * @param {Object<String, String>} Attributes Extra attributes for the script tag
  * @returns {Promise<Event>}
  */
-function PromiseLoad (Src, Head, Attributes) {
+export default function PromiseLoad (Src, Head, Attributes) {
     return new Promise((onResolve, onReject) => {
         /**
          * @type {HTMLElement}
          */
-        const Container = (Head || true)
-            ? document.head
-            : document.body
-        ;
+        let Container;
+        
+        if (Head === undefined || Head === null) {
+            Head = true;
+        }
+        if (Head)
+        {
+            Container =  document.head;
+        } else {
+            Container = document.body;
+        }
+        
         
         const Script = document.createElement('script');
         if (typeof Attributes === "object" && Attributes !== null) {
@@ -33,5 +41,5 @@ function PromiseLoad (Src, Head, Attributes) {
         Script.src = Src;
 
         Container.appendChild(Script);
-    });
-};
+    })
+}
