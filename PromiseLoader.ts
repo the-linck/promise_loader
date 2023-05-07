@@ -7,7 +7,11 @@
  * @param {Object<String, String>} Attributes Extra attributes for the script tag
  * @returns {Promise<Event>}
  */
-export default function PromiseLoad (Src, Head, Attributes) {
+export default function PromiseLoad (
+    Src : string,
+    Head: boolean,
+    Attributes: {[key: string]: string;}
+): Promise<Event> {
     return new Promise((onResolve, onReject) => {
         /**
          * @type {HTMLElement}

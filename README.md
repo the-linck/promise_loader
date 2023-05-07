@@ -1,6 +1,6 @@
 # Promise Loader (JS Module)
 
-> This GIT branch is made to be used as a Javascript module. If you need the "normal" script, go for the main branch.
+> This GIT branch is made to be used as a Javascript module built in. If you need the "normal" script, go for the `ts` branch.
 
 A small and simple to use module, that allows loading scripts atop of promises in HTML documents - not other modules, as no library is needed to load modules atop of promises (dynamic import).
 
@@ -8,10 +8,10 @@ The main point of using it is to reduce code repetition and also promise operati
 
 ## Using the loader
 
-Obviously the first step is to include our main file, **PromiseLoader.js** on your code:
+Obviously the first step is to include our main file, **PromiseLoader.ts** on your code:
 
 ```js
-import PromiseLoader from "./PromiseLoader.js";
+import PromiseLoader from "./PromiseLoader.ts";
 ```
 
 Having our script loader avaliable, we can use it in a pretty straight-foward way:
