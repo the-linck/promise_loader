@@ -1,7 +1,5 @@
 # Promise Loader (JS Module)
 
-> This GIT branch is made to be used as a Javascript module built in. If you need the "normal" script, go for the `ts` branch.
-
 A small and simple to use module, that allows loading scripts atop of promises in HTML documents - not other modules, as no library is needed to load modules atop of promises (dynamic import).
 
 The main point of using it is to reduce code repetition and also promise operations (chaining, joining, racing, etc) over script loading.
