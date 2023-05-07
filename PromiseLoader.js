@@ -12,10 +12,17 @@ function PromiseLoad (Src, Head, Attributes) {
         /**
          * @type {HTMLElement}
          */
-        const Container = (Head || true)
-            ? document.head
-            : document.body
-        ;
+        let Container;
+        
+        if (Head === undefined || Head === null) {
+            Head = true;
+        }
+        if (Head)
+        {
+            Container =  document.head;
+        } else {
+            Container = document.body;
+        }
         
         const Script = document.createElement('script');
         if (typeof Attributes === "object" && Attributes !== null) {
